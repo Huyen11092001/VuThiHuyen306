@@ -1,0 +1,47 @@
+@model IEnumerable<VuThiHuyen306.Models.VTH0306>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Hiển Thị Danh Sách VTH</h1>
+
+<p>
+    <a asp-action="Create">Thêm mới</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+             <th>
+                @Html.DisplayNameFor(model => model.VTHId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VTHName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VTHGender)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VTHId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VTHName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VTHGender)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.VTHId">Thêm</a> |
+                <a asp-action="Details" asp-route-id="@item.VTHId">Sửa</a> |
+                <a asp-action="Delete" asp-route-id="@item.VTHId">Xóa</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

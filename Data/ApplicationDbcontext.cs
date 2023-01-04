@@ -13,4 +13,6 @@ using VuThiHuyen306.Models;
         }
 
         public DbSet<VuThiHuyen306.Models.CompanyVTH306> CompanyVTH306 { get; set; } = default!;
+
+        public DbSet<VuThiHuyen306.Models.VTH0306> VTH0306 { get; set; } = default!;
     }
